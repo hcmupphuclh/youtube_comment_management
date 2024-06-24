@@ -1,5 +1,6 @@
 /.venv
 /.vscode
+/__pycache__
 /workspace/abstractions/__pycache__
 /workspace/applications/__pycache__
 /workspace/applications/protocols/__pycache__
