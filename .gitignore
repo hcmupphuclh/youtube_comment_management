@@ -1,0 +1,14 @@
+/.venv
+/.vscode
+/workspace/abstractions/__pycache__
+/workspace/applications/__pycache__
+/workspace/applications/protocols/__pycache__
+/workspace/blueprints/__pycache__
+/workspace/blueprints/main/attachments/diagrams/__pycache__
+/workspace/blueprints/main/attachments/diagrams/configs/__pycache__
+/workspace/blueprints/main/attachments/diagrams/endpoints/__pycache__
+/workspace/blueprints/main/attachments/diagrams/endpoints/home/__pycache__
+/workspace/blueprints/main/attachments/diagrams/endpoints/upload/__pycache__
+/workspace/blueprints/main/attachments/diagrams/programs/__pycache__
+workspace\blueprints\main\attachments\diagrams\client_secret_files
+
