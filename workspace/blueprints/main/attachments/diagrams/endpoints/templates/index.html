@@ -1,0 +1,89 @@
+{%extends "layout.html"%}
+{%block page_content%}
+<div class="child-containter">
+    <div class="container text-center">
+      <div class='row'>
+        <div class='col-6'>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Mẫu câu</span>
+            </div>
+            <input id="audianceTextArea" name="audianceTextArea" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+          </div>
+        </div>
+        <div class='col-3'>
+          <div class="btn-group">
+            <button id="audianceButton" name="audianceButton" class="btn btn-primary" type="submit">Bình luận</button>
+          <input name="audianceFileInput" id="audianceFileUploadInput" type="file" style="display:none"></input>
+          <button id="audianceFileChoosing" class="btn btn-secondary btn-sm" type="button">
+            Chọn file tải lên
+          </button>
+
+          <button id="audianceFileUpload" class="btn btn-secondary btn-sm" type="button">
+            Upload file
+          </button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="btn-group">
+            <button id="audianceSelectionPresent" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Chọn tài khoản bình luận
+            </button>
+            <ul id="audianceAccountSelection" class="dropdown-menu" >
+              {%for audianceAccount in audianceAccounts%}
+              <li class="dropdown-item">{{audianceAccount}}</li>
+              {%endfor%}
+            </ul>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-6">
+            <button id="performanceChosenAccountSubmit" type="button" class="btn btn-primary">Tải dữ liệu</button>
+          </div>
+          <div class="col-3">
+            <div class="btn-group">
+              <input id="performanceFileUploadInput" type="file" style="display:none"></input>
+            <button id="performanceFileChoosing" class="btn btn-secondary btn-sm" type="button">
+              Chọn file tải lên
+            </button>
+
+            <button id="performanceFileUpload" class="btn btn-secondary btn-sm" type="button">
+              Upload file
+            </button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="btn-group">
+              <button id="performanceSelectionPresent" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Chọn tài khoản
+              </button>
+              <ul id="performanceAccountSelection" class="dropdown-menu" >
+                {%for performanceAccount in performanceAccounts%}
+                <li class="dropdown-item">{{performanceAccount}}</li>
+                {%endfor%}
+              </ul>
+            </div>
+      </div>
+      <div class="row">
+        <div class='col-2'>
+          <div class='input-group mb-3'>
+            <div class='input-group-prepend'>
+              <div class='input-group-text'>
+                <input type='checkbox' name='selectAll' id='selectAll'>
+              </div> 
+            </div>
+          </div>
+        </div>
+        <div class='col-6'>Tiêu đề video</div>
+        <div class='col-2'>Link video</div>
+        <div class='col-2'>Ngày công bố</div>
+      </div>
+      <div class="row" id="gridview">
+      </div>
+      <a href="javascript:prevPage()" id="btn_prev">Prev</a>
+      <a href="javascript:nextPage()" id="btn_next">Next</a>
+      page: <span id="page"></span>
+</div>
+{%endblock%}
+
+
