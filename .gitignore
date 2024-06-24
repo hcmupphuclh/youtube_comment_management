@@ -1,6 +1,5 @@
 /.venv
 /.vscode
-/__pycache__
 /workspace/abstractions/__pycache__
 /workspace/applications/__pycache__
 /workspace/applications/protocols/__pycache__
@@ -12,4 +11,5 @@
 /workspace/blueprints/main/attachments/diagrams/endpoints/upload/__pycache__
 /workspace/blueprints/main/attachments/diagrams/programs/__pycache__
 workspace\blueprints\main\attachments\diagrams\client_secret_files
-
+workspace\blueprints\main\attachments\diagrams\client_secret_files\audiance
+workspace\blueprints\main\attachments\diagrams\client_secret_files\performance
