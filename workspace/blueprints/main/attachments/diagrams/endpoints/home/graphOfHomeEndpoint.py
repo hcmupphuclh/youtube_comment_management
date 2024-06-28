@@ -2,8 +2,6 @@ from flask import render_template
 
 from workspace.applications.protocols.blueprints_main_stub import ProgressOfMainStub
 from workspace.abstractions.endpoints import AbstractionOfEndpoints
-from workspace.blueprints.main.attachments.diagrams.configs import cliensecret_youtube_api as youtube_clientsecret
-from workspace.blueprints.main.attachments.diagrams.configs import apikeys_youtube_api as youtube_api
 from workspace.blueprints.main.attachments.diagrams.configs.file_configuration import ConfigurationOfFiles
 
 class AttachmentOfBlueprints_HomeEndpointGraph(AbstractionOfEndpoints):

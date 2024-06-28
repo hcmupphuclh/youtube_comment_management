@@ -4,9 +4,7 @@ import jsonpickle
 
 from workspace.applications.protocols.blueprints_main_stub import ProgressOfMainStub
 from workspace.abstractions.endpoints import AbstractionOfEndpoints
-from workspace.blueprints.main.attachments.diagrams.configs.cliensecret_youtube_api import APIsOfYoutubeFromClientSecret
 from workspace.blueprints.main.attachments.diagrams.configs.APIRequestionFromFiles import AttachmentOfBlueprints_APIRequestionFromFiles
-from workspace.blueprints.main.attachments.diagrams.configs.APIRequestionFromKeys import AttachmentOfBlueprints_APIRequestionFromKeys 
 from workspace.blueprints.main.attachments.diagrams.programs.YoutubeAPIRequestion import YoutubePortion
 
 
