@@ -3,8 +3,8 @@ from flask import request, Response
 
 from resources.applications.protocols.blueprints_main_stub import ProgressOfMainStub
 from resources.abstractions.endpoints import AbstractionOfEndpoints
-from resources.blueprints.main.attachments.diagrams.configs.APIRequestionFromFiles import AttachmentOfBlueprints_APIRequestionFromFiles 
-from resources.blueprints.main.attachments.diagrams.programs.YoutubeAPIRequestion import YoutubePortion
+from resources.blueprints.attachments.configs.APIRequestionFromFiles import AttachmentOfBlueprints_APIRequestionFromFiles 
+from resources.blueprints.attachments.programs.YoutubeAPIRequestion import YoutubePortion
 
 
 class AttachmentOfBlueprints_CommentExecutionEndpointGraph(AbstractionOfEndpoints):
@@ -19,7 +19,7 @@ class AttachmentOfBlueprints_CommentExecutionEndpointGraph(AbstractionOfEndpoint
         
         
      def comment_execution(self):
-        pathToChosenClientSecretFolder = abspath("resources/blueprints/main/attachments/diagrams/client_secret_files/audiance/")
+        pathToChosenClientSecretFolder = abspath("resources/blueprints/attachments/client_secret_files/audiance/")
         jsonData = request.get_json()
         
         youtubeAPIRequestion = AttachmentOfBlueprints_APIRequestionFromFiles(pathToChosenClientSecretFolder+"/"+jsonData["audianceChosenAccount"])
