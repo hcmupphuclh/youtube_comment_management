@@ -2,7 +2,7 @@ from flask import render_template
 
 from resources.applications.protocols.blueprints_main_stub import ProgressOfMainStub
 from resources.abstractions.endpoints import AbstractionOfEndpoints
-from resources.blueprints.main.attachments.diagrams.configs.file_configuration import ConfigurationOfFiles
+from resources.blueprints.attachments.configs.file_configuration import ConfigurationOfFiles
 
 class AttachmentOfBlueprints_HomeEndpointGraph(AbstractionOfEndpoints):
     
