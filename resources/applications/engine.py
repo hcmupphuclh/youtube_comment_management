@@ -1,5 +1,5 @@
 from flask import Flask
-from resources.blueprints.main.attachments.diagrams.index_diagram import AttachmentOfBlueprints_IndexDiagram
+from resources.blueprints.diagrams.index_diagram import AttachmentOfBlueprints_IndexDiagram
 
 class Process():
     
