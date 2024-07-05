@@ -1,4 +1,4 @@
-from workspace.applications.engine import Process
+from resources.applications.engine import Process
 
 if __name__ == "__main__":
     process = Process()
