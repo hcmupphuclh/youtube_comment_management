@@ -87,3 +87,5 @@ resources/blueprints/attachments/configs/__pycache__/filenameFetchingConfig.cpyt
 resources/blueprints/attachments/configs/__pycache__/sqlalchemyConfig.cpython-312.pyc
 resources/blueprints/attachments/configs/__pycache__/youtubeConfig.cpython-312.pyc
 resources/blueprints/attachments/programs/__pycache__/YoutubeAPIRequestion.cpython-312.pyc
+resources/blueprints/attachments/upload/__pycache__/audiancefiles_upload.cpython-312.pyc
+resources/blueprints/attachments/upload/__pycache__/performancefiles_upload.cpython-312.pyc
