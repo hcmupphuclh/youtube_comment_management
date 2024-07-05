@@ -4,8 +4,8 @@ import jsonpickle
 
 from resources.applications.protocols.blueprints_main_stub import ProgressOfMainStub
 from resources.abstractions.endpoints import AbstractionOfEndpoints
-from resources.blueprints.main.attachments.diagrams.configs.APIRequestionFromFiles import AttachmentOfBlueprints_APIRequestionFromFiles
-from resources.blueprints.main.attachments.diagrams.programs.YoutubeAPIRequestion import YoutubePortion
+from resources.blueprints.attachments.configs.APIRequestionFromFiles import AttachmentOfBlueprints_APIRequestionFromFiles
+from resources.blueprints.attachments.programs.YoutubeAPIRequestion import YoutubePortion
 
 
 class AttachmentOfBlueprints_DataRequestionEndpointGraph(AbstractionOfEndpoints):
@@ -19,7 +19,7 @@ class AttachmentOfBlueprints_DataRequestionEndpointGraph(AbstractionOfEndpoints)
         self.methods = ["POST", "GET"]
         
     def get_data(performanceChosenAccount):
-        pathToChosenClientSecretFolder = abspath("resources/blueprints/main/attachments/diagrams/client_secret_files/performance/")
+        pathToChosenClientSecretFolder = abspath("resources/blueprints/attachments/client_secret_files/performance/")
         jsonData = request.get_json()
         
         # youtubeAPIRequestion = APIsOfYoutubeFromClientSecret(pathToChosenClientSecretFolder+"/"+jsonData["performanceChosenAccount"])
