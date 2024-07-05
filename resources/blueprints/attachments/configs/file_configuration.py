@@ -11,9 +11,9 @@ class ConfigurationOfFiles():
         self.audiancePath()
     
     def performancePath(self):
-        path = abspath("resources/blueprints/main/attachments/diagrams/client_secret_files/performance/")
+        path = abspath("resources/blueprints/attachments/client_secret_files/performance/")
         self.performancePath = [f for f in listdir(path) if isfile(join(path, f))]
     
     def audiancePath(self):
-        path = abspath("resources/blueprints/main/attachments/diagrams/client_secret_files/audiance/")
+        path = abspath("resources/blueprints/attachments/client_secret_files/audiance/")
         self.audiancePath = [f for f in listdir(path) if isfile(join(path, f))]
