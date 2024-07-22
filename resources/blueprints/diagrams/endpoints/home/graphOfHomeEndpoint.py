@@ -2,7 +2,8 @@ from flask import render_template
 
 from resources.applications.protocols.blueprints_main_stub import ProgressOfMainStub
 from resources.abstractions.endpoints import AbstractionOfEndpoints
-from resources.blueprints.attachments.configs.file_configuration import ConfigurationOfFiles
+from resources.blueprints.attachments.DAO.clientDAO import ClientDAO
+from resources.blueprints.attachments.sql.session import Session
 
 class AttachmentOfBlueprints_HomeEndpointGraph(AbstractionOfEndpoints):
     
@@ -15,8 +16,13 @@ class AttachmentOfBlueprints_HomeEndpointGraph(AbstractionOfEndpoints):
         self.methods = ["GET"]
         
     def home(self):
-        fileConfig = ConfigurationOfFiles()
+        DACore = Session()
+        client = ClientDAO(DACore.session)
         
-        performanceAccounts = fileConfig.performancePath
-        audianceAccounts = fileConfig.audiancePath
-        return render_template("index.html", performanceAccounts=performanceAccounts, audianceAccounts=audianceAccounts)
+        client.regenerationByRole("audiance")
+        audianceFilesNode = client.storage
+        
+        client.regenerationByRole("performance")
+        performanceFilesNode = client.storage
+        
+        return render_template("index.html", performanceAccounts=performanceFilesNode, audianceAccounts=audianceFilesNode)
