@@ -25,6 +25,7 @@ class ClientDAO(DAO):
         return results
     
     def regenerationByRole(self, role:str):
+        self.storage = {}
         
         records = self.DACore.query(ClientModel).filter_by(role = role)
         for record in records:

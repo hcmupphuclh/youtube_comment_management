@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine, Column, String, Integer, CHAR
-from base.declarative import DeclartiveBase
+from resources.blueprints.attachments.base.declarative import DeclartiveBase
 
 declarative = DeclartiveBase()
 Base = declarative.base
