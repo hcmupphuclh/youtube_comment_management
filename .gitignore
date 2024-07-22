@@ -92,3 +92,4 @@ resources/blueprints/attachments/upload/__pycache__/performancefiles_upload.cpyt
 .bat
 env_create.ps1
 env_run.ps1
+resources/blueprints/attachments/client_secret_files/audiance/client_secret_phuocsonvipassana.json
