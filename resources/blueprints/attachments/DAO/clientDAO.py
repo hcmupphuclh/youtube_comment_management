@@ -12,6 +12,14 @@ class ClientDAO(DAO):
     def storage(self, storage:dict[str, str]):
         self._storage = storage
     
+    @property
+    def item(self) -> str:
+        return self._item
+    
+    @item.setter
+    def item(self, item:str):
+        self._item = item
+    
     def __init__(self, DACore: sessionmaker) -> None:
         super().__init__(DACore)
     
@@ -38,6 +46,8 @@ class ClientDAO(DAO):
             results.append(index)
             
         return results
+    def getItem(self, index:str):
+        self.item = self.storage[index]
     
     def storageRegeneration(self):
         records = self.DACore.query(ClientModel).all()
@@ -49,7 +59,7 @@ class ClientDAO(DAO):
         for item in self.storage:
             print(item, ":", self.storage[item])
     
-    def save(self, accountName: str, fileName: str):
-        client = ClientModel(accountName, fileName)
+    def save(self, accountName: str, fileName: str, role:str):
+        client = ClientModel(accountName, fileName, role )
         self.DACore.add(client)
         self.DACore.commit()

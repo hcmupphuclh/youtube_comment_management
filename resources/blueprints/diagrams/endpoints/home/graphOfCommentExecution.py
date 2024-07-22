@@ -5,7 +5,8 @@ from resources.applications.protocols.blueprints_main_stub import ProgressOfMain
 from resources.abstractions.endpoints import AbstractionOfEndpoints
 from resources.blueprints.attachments.configs.APIRequestionFromFiles import AttachmentOfBlueprints_APIRequestionFromFiles 
 from resources.blueprints.attachments.programs.YoutubeAPIRequestion import YoutubePortion
-
+from resources.blueprints.attachments.DAO.clientDAO import ClientDAO
+from resources.blueprints.attachments.sql.session import Session
 
 class AttachmentOfBlueprints_CommentExecutionEndpointGraph(AbstractionOfEndpoints):
     
@@ -19,10 +20,17 @@ class AttachmentOfBlueprints_CommentExecutionEndpointGraph(AbstractionOfEndpoint
         
         
      def comment_execution(self):
-        pathToChosenClientSecretFolder = abspath("resources/blueprints/attachments/client_secret_files/audiance/")
         jsonData = request.get_json()
+        index = jsonData["audianceChosenAccount"]
         
-        youtubeAPIRequestion = AttachmentOfBlueprints_APIRequestionFromFiles(pathToChosenClientSecretFolder+"/"+jsonData["audianceChosenAccount"])
+        DACore = Session()
+        client = ClientDAO(DACore.session)
+        client.getItem(index)
+        
+        pathToChosenClientSecretFolder = abspath("resources/blueprints/attachments/client_secret_files/audiance/")
+        
+        
+        youtubeAPIRequestion = AttachmentOfBlueprints_APIRequestionFromFiles(pathToChosenClientSecretFolder+"/"+client.item)
         youtubePortion = YoutubePortion(youtubeAPIRequestion.core)
         youtubePortion.doComments(jsonData["comment"], jsonData["videoIDs"])
         

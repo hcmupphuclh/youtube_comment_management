@@ -2,6 +2,8 @@ from resources.abstractions.blueprints import AbstractionOfBlueprints
 from resources.blueprints.diagrams.endpoints.home.graphOfHomeEndpoint import AttachmentOfBlueprints_HomeEndpointGraph
 from resources.blueprints.diagrams.endpoints.home.graphOfDataRequestion import AttachmentOfBlueprints_DataRequestionEndpointGraph
 from resources.blueprints.diagrams.endpoints.home.graphOfCommentExecution import AttachmentOfBlueprints_CommentExecutionEndpointGraph
+from resources.blueprints.diagrams.endpoints.home.graphOfAudianceFileUpload import AttachmentOfBlueprints_AudianceFileUploadEnpointGraph
+from resources.blueprints.diagrams.endpoints.home.graphOfPerformanceFileUpload import AttachmentOfBlueprints_PerformanceFileUploadEnpointGraph
 
 class AttachmentOfBlueprints_IndexDiagram(AbstractionOfBlueprints):
     
@@ -24,5 +26,11 @@ class AttachmentOfBlueprints_IndexDiagram(AbstractionOfBlueprints):
         
         commentExecutionHandler = AttachmentOfBlueprints_CommentExecutionEndpointGraph(self)
         commentExecutionHandler.endpoint_adjustment()
+        
+        audianceFileUpload = AttachmentOfBlueprints_AudianceFileUploadEnpointGraph(self)
+        audianceFileUpload.endpoint_adjustment()
+        
+        performanceFileUpload = AttachmentOfBlueprints_PerformanceFileUploadEnpointGraph(self)
+        performanceFileUpload.endpoint_adjustment()
         
         
