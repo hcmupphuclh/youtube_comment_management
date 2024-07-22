@@ -27,6 +27,12 @@ class DAO(ABC):
     def find(self, index:str):
         return self.storage[index]
     
+    def search(self, index:str):
+        for item in self.storage:
+            if(item == index):
+                return True
+            else:
+                return False
     @abstractmethod
     def all(self):
         results = []
@@ -36,13 +42,6 @@ class DAO(ABC):
             
         return results
     
-    def search(self, index:str):
-        for item in self.storage:
-            if(item == index):
-                return True
-            else:
-                return False
-            
     @abstractmethod
     def present(self):
         for item in self.storage:
