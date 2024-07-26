@@ -18,12 +18,15 @@ class AttachmentOfBlueprints_PerformanceFileUploadEnpointGraph(AbstractionOfEndp
         self.methods = ["POST", "GET"]
         
     def performanceFileUpload(self):
+        jsonData = request.get_json()
+        accountName = jsonData["performanceAccount"]
+        
         DACore = Session()
         client = ClientDAO(DACore.session)
         
-        client.save("accountName", stringrandom.randomWords(64), "performance")
+        client.save(accountName, stringrandom.randomWords(64), "performance")
         client.regenerationByRole("performance")
-        client.getItem("accountName")
+        client.getItem(accountName)
         
         uploaded_file = request.files["userfile"]
         uploaded_file.save(os.path.join(abspath("resources/blueprints/attachments/client_secret_files/performance/"), client.item))
