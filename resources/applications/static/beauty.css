@@ -4,8 +4,36 @@
     
 }
 
-.child-container{
-    width: auto;
-    height: auto;
-    
+.bordered{
+    border: 1px solid #cccccc;
+}
+
+#pagination{
+    text-align: center;
+    display: flex;
+    align-items: stretch;
+}
+.wrap-flex {
+    display: flex;
+    align-items: stretch; /* baseline | center | stretch */
+    text-align: center;
+    justify-content: center;
+}
+
+#audianceAccountSelection li{
+    display: inline;
+}
+
+#performanceAccountSelection li{
+    display: inline;
+}
+
+.li-wrap{
+    display:flex;
+    float:left;
+    margin:5px;
+}
+
+.li-wrap #label{
+    margin-right: 40px;
 }

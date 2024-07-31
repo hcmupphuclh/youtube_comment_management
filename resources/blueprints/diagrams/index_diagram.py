@@ -4,6 +4,10 @@ from resources.blueprints.diagrams.endpoints.home.graphOfDataRequestion import A
 from resources.blueprints.diagrams.endpoints.home.graphOfCommentExecution import AttachmentOfBlueprints_CommentExecutionEndpointGraph
 from resources.blueprints.diagrams.endpoints.home.graphOfAudianceFileUpload import AttachmentOfBlueprints_AudianceFileUploadEnpointGraph
 from resources.blueprints.diagrams.endpoints.home.graphOfPerformanceFileUpload import AttachmentOfBlueprints_PerformanceFileUploadEnpointGraph
+from resources.blueprints.diagrams.endpoints.home.graphOfAudianceConfiguration import AttachmentOfBlueprints_AudianceConfigurationEnpointGraph
+from resources.blueprints.diagrams.endpoints.home.graphOfPerformanceConfiguration import AttachmentOfBlueprints_PerformanceConfigurationEnpointGraph
+from resources.blueprints.diagrams.endpoints.home.graphOfInformationRequestie import AttachmentOfBlueprints_InformationRequestieEnpointGraph
+from resources.blueprints.diagrams.endpoints.home.graphOfRequirationSwitch import AttachmentOfBlueprints_RequirationSwitchEndpointGraph
 
 class AttachmentOfBlueprints_IndexDiagram(AbstractionOfBlueprints):
     
@@ -33,4 +37,14 @@ class AttachmentOfBlueprints_IndexDiagram(AbstractionOfBlueprints):
         performanceFileUpload = AttachmentOfBlueprints_PerformanceFileUploadEnpointGraph(self)
         performanceFileUpload.endpoint_adjustment()
         
+        audianceConfiguration = AttachmentOfBlueprints_AudianceConfigurationEnpointGraph(self)
+        audianceConfiguration.endpoint_adjustment()
         
+        performanceConfiguration = AttachmentOfBlueprints_PerformanceConfigurationEnpointGraph(self)
+        performanceConfiguration.endpoint_adjustment()
+        
+        informationRequestie = AttachmentOfBlueprints_InformationRequestieEnpointGraph(self)
+        informationRequestie.endpoint_adjustment()
+        
+        performanceAccountsReserve = AttachmentOfBlueprints_RequirationSwitchEndpointGraph(self)
+        performanceAccountsReserve.endpoint_adjustment()

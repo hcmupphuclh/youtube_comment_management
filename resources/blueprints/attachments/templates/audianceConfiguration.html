@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-3">
+      <input id="audianceAccountName" class="form-control" placeholder="Mời nhập tên tài khoản" type="text"></input>
+  </div>
+</div>
+<br>
+<div class='row'>
+    <div class='col'>
+        <div class="btn-group">
+          <label for="audianceFileUploadInput" ></label>
+          <input name="audianceFileInput" class="form-control" name="audianceFileUploadInput" id="audianceFileUploadInput" type="file"></input>
+          <button id="audianceFileUpload" name="audianceFileUploadButton" class="btn btn-primary btn-sm" type="button">
+            Upload
+          </button>
+        </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+      <div class="col-4">
+        Danh sách tài khoản khán giả:
+      </div>
+      <div class="col-2">
+        <div class="btn-group">
+          <button id="audianceSelectionPresent" style="display:none" class="btn btn-sm btn-primary" type="button" aria-expanded="false">
+            Lưu tài khoản
+          </button>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <ul id="audianceAccountSelection">
+        {%for key, value in audianceAccounts.items()%}
+        <div class="li-wrap">
+          <li>
+            <button class="btn btn-sm btn-primary"> Thiết lập</button>
+          </li>
+          <li>{{value["accountName"]}}</li>
+        </div>
+        {%endfor%}
+        </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      <div class="btn-group">
+        <button id="audianceSelectionPresent" class="btn btn-primary" type="button" aria-expanded="false">
+          Thực thi bình luận
+        </button>
+      </div>
+    </div>
+  </div>

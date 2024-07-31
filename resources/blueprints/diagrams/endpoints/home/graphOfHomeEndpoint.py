@@ -16,13 +16,4 @@ class AttachmentOfBlueprints_HomeEndpointGraph(AbstractionOfEndpoints):
         self.methods = ["GET"]
         
     def home(self):
-        DACore = Session()
-        client = ClientDAO(DACore.session)
-        
-        client.regenerationByRole("audiance")
-        audianceFilesNode = client.storage
-        
-        client.regenerationByRole("performance")
-        performanceFilesNode = client.storage
-        
-        return render_template("index.html", performanceAccounts=performanceFilesNode, audianceAccounts=audianceFilesNode)
+        return render_template("index.html")

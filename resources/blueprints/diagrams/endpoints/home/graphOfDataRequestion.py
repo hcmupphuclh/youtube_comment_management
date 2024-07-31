@@ -20,18 +20,18 @@ class AttachmentOfBlueprints_DataRequestionEndpointGraph(AbstractionOfEndpoints)
         self.methods = ["POST", "GET"]
         
     def get_data(performanceChosenAccount):
-        jsonData = request.get_json()
-        index = jsonData["performanceChosenAccount"]
-        
         DACore = Session()
         client = ClientDAO(DACore.session)
-        client.getItem(index)
+        client.regenerationByRequiration()
         
         pathToChosenClientSecretFolder = abspath("resources/blueprints/attachments/client_secret_files/performance/")
         
-        youtubeAPIRequestion = AttachmentOfBlueprints_APIRequestionFromFiles(pathToChosenClientSecretFolder+"/" + client.item)
-        youtubePortion = YoutubePortion(youtubeAPIRequestion.core)
+        for key, value in client.storage.items():
+            
+          youtubeAPIRequestion = AttachmentOfBlueprints_APIRequestionFromFiles(pathToChosenClientSecretFolder+"/" + value["fileName"])
+          youtubePortion = YoutubePortion(youtubeAPIRequestion.core)
     
-        results = youtubePortion.getAllItems()
+          result = youtubePortion.getAllItems()
+          results = {value["accountName"]:result}
         
         return Response(jsonpickle.encode(results), mimetype="application/json")

@@ -11,7 +11,7 @@ $(document).ready(function(){
     });
 
     $('#performanceFileUpload').on('click', function(){
-      $("#busniessfileUploadInput").trigger("click");
+      $("#busniessfileUploadInput").trigger("click");      
     });
   
     $('#performanceChosenAccountSubmit').on('click', function(){

@@ -22,7 +22,7 @@ class DAO(ABC):
     
     def __init__(self, DACore:sessionmaker) -> None:
         self.DACore = DACore
-        self.storage = self.storageGeneration()
+        self.storageGeneration()
         
     def find(self, index:str):
         return self.storage[index]
@@ -33,15 +33,7 @@ class DAO(ABC):
                 return True
             else:
                 return False
-    @abstractmethod
-    def all(self):
-        results = []
-        
-        for index in self.storage:
-            results.append(index)
             
-        return results
-    
     @abstractmethod
     def present(self):
         for item in self.storage:

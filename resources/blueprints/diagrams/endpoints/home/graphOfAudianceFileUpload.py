@@ -18,14 +18,14 @@ class AttachmentOfBlueprints_AudianceFileUploadEnpointGraph(AbstractionOfEndpoin
         self.methods = ["POST", "GET"]
         
     def audianceFileUpload(self):
-        jsonData = request.get_json()
-        accountName = jsonData["audianceAccount"]
+        accountName = request.form['audianceAccount']
         
         DACore = Session()
         client = ClientDAO(DACore.session)
         
-        client.save(accountName, stringrandom.randomWords(64), "performance")
-        client.regenerationByRole("audiance")
+        client.storageUpdate(accountName, stringrandom.randomWords(64), "audiance", 0)
+        client.save()
+        client.storageRegeneration()
         client.getItem(accountName)
         
         uploaded_file = request.files["userfile"]

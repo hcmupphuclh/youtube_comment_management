@@ -1,5 +1,20 @@
 <div class="row">
-    <div class='col-2'>
+  <div class="col">
+    <div class="btn-group">
+      <button id="performanceSelectionPresent" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Chọn tài khoản
+      </button>
+      <ul id="performanceAccountSelection" class="dropdown-menu" >
+        {%for performanceAccount in performanceAccounts%}
+        <li class="dropdown-item">{{performanceAccount}}</li>
+        {%endfor%}
+      </ul>
+    </div>
+  </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-2">
       <div class='input-group mb-3'>
         <div class='input-group-prepend'>
           <div class='input-group-text'>
@@ -15,9 +30,11 @@
 <div class="row" id="gridview">
 </div>
 <div class="row">
-  <div class="wrap-flex">
-    <a href="javascript:prevPage()" id="btn_prev"><</a>
-    <span id="page"></span>
-    <a href="javascript:nextPage()" id="btn_next">></a>
+  <div class="col">
+    <div class="wrap-flex">
+      <a href="javascript:prevPage()" id="btn_prev"><</a>
+      <span id="page"></span>
+      <a href="javascript:nextPage()" id="btn_next">></a>
+    </div>
   </div>
 </div>
