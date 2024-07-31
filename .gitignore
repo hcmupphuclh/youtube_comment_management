@@ -89,16 +89,12 @@ resources/blueprints/attachments/configs/__pycache__/youtubeConfig.cpython-312.p
 resources/blueprints/attachments/programs/__pycache__/YoutubeAPIRequestion.cpython-312.pyc
 resources/blueprints/attachments/upload/__pycache__/audiancefiles_upload.cpython-312.pyc
 resources/blueprints/attachments/upload/__pycache__/performancefiles_upload.cpython-312.pyc
-.bat
-env_create.ps1
-env_run.ps1
 resources/blueprints/attachments/client_secret_files/audiance/client_secret_phuocsonvipassana.json
 resources/blueprints/attachments/base/__pycache__/declarative.cpython-312.pyc
 resources/blueprints/attachments/DAO/__pycache__/clientDAO.cpython-312.pyc
 resources/blueprints/attachments/models/__pycache__/clientModel.cpython-312.pyc
 resources/blueprints/attachments/sql/__pycache__/session.cpython-312.pyc
 resources/abstractions/__pycache__/DAO.cpython-312.pyc
-youtube.db
 resources/blueprints/attachments/programs/__pycache__/stringrandom.cpython-312.pyc
 resources/blueprints/diagrams/endpoints/home/__pycache__/graphOfAudianceFileUpload.cpython-312.pyc
 resources/blueprints/diagrams/endpoints/home/__pycache__/graphOfPerformanceFileUpload.cpython-312.pyc
